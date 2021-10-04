@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+</body>
+</html>
+
+1. Select the section with a container id without using querySelector.
+I would use document.getElementById("container")
+
+2. Select the section with a container id using querySelector.
+I would use document.querySelector("#container")
+
+3. Select all the items list with a class of "second".
+I would use document.getElementsByClassName("second")
+
+4. Select a list item with a class of third, but only the list item inside of the ol tag.
+I would use document.querySelector("ol.third")
+
+5. Give the text "Hello!" to the section with a container id.
+I would use document.getElementById("container").innerHTML= "Hello!"
+
+6. Add the main class to the div with a footer class.
+I would use document.querySelector("div.footer").classList.add("main")
+
+7. Remove the main class on the div with a footer class.
+I would use document.querySelector("div.footer").classList.remove("main")
+
+8. Create a new li element.
+I would use let newLi = document.createElement("li")
+
+9. Give the li the text "four".
+I would use newLi.innerHTML = "four"
+
+10. Append the li to the ul element.
+I would use document.getElementByTagName("ul")[0].appendChild(newLi)
+
+
+Additional
+let change = document.getElementsByTagName("ol li")
+
+for (let i = 0; i < change.length; i++) {
+    change.style.backgroundcolor = "green";
+}
+
+let remove= document.querySelector(".footer")
+footer.remove();
